@@ -19,25 +19,21 @@ Je suis dans la configuration suivante : j'ai un clavier PC 105 touches Azerty 
 
 ### Exemple 1 : Le cas du caractère '#'
 
-```
-# '#'
-@32-0x200,0x2B
-```
+    # '#'
+    @32-0x200,0x2B
 
-Sous Linux (machine hôte), la séquence est *@32-0x200*. Deux touches : [AltGr]+[3]
+Sous Linux (machine hôte), la séquence est *@32-0x200*. Deux touches : `[AltGr]+[3]`
 
 Pour l'Atari, internet est plein de ressource : https://www.jchr.be/atari/tables.htm. Une seule touche : celle qui se trouve en bas à droite de la touche "Return".
 
 ### Exemple 2 : La cas du caractère '{'
 
-```
-# '{'
-@33-0x200,0x2A-0x38-0x1A
-```
+    # '{'
+    @33-0x200,0x2A-0x38-0x1A
 
-Sous Linux, il me faut faire un [AltGr]+[4] => *@33-0x200*
+Sous Linux, il me faut faire un `[AltGr]+[4]` => *@33-0x200*
 
-Sous Atari, il me faut faire un [SfG]+[Alt]+[^] => *0x2A-0x38-0x1A*
+Sous Atari, il me faut faire un `[SfG]+[Alt]+[^]` => *0x2A-0x38-0x1A*
 
 ### Utilisation
 
@@ -74,25 +70,21 @@ I have the following configuration: I have a 105-key French Azerty PC keyboard a
 
 ### Example 1: The case of the '#' character
 
-`` ``
-# '#'
-@ 32-0x200,0x2B
-`` ``
+    # '#'
+    @ 32-0x200,0x2B
 
-On Linux (host machine), the sequence is *@ 32-0x200*. Two keys: [AltGr] + [3]
+On Linux (host machine), the sequence is *@32-0x200*. Two keys: `[AltGr]+[3]`
 
 For the Atari, the internet is full of resources: https://www.jchr.be/atari/tables.htm. Only one key: the one at the bottom right of the "Return" key.
 
 ### Example 2: The case of the character '{'
 
-`` ``
-# '{'
-@ 33-0x200,0x2A-0x38-0x1A
-`` ``
+    # '{'
+    @ 33-0x200,0x2A-0x38-0x1A
 
-Under Linux, I need to do a [AltGr] + [4] => *@ 33-0x200*
+Under Linux, I need to do a `[AltGr]+[4]` => *@33-0x200*
 
-Under Atari, I need to do a [SfG] + [Alt] + [^] => *0x2A-0x38-0x1A*
+Under Atari, I need to do a `[SfG]+[Alt]+[^]` => *0x2A-0x38-0x1A*
 
 ### Use
 
