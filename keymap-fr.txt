@@ -1,0 +1,133 @@
+# This is an example for a keyboard mapping file that can be used in Hatari
+# by loading it from the keyboard setup dialog.
+#
+# Lines starting with a '#' or with a ';' are comments. All other lines
+# should contain exactly one key name and a scancode, separated by a comma.
+# Comment characters can be quoted with '\#' and '\;'.
+#
+# The key name is the libSDL symbolic name of the key, see the following
+# URL for a list: https://wiki.libsdl.org/SDL_Keycode
+# You can also use the symbolic keycode value instead of the name,
+# which you can get with the "--trace keymap" output from Hatari, for
+# example, but note that the values are different between SDL1 and SDL2
+# and thus they are not portable.
+#
+# The given host key will be mapped to the ST key which is specified by
+# second number - the ST scan code of the key.  "--trace keymap" output
+# shows the already mapped scan code.
+#
+# All numbers can be given as decimals or hexadecimals (with "0x" prefix).
+#
+# Syntaxe : <SDL Key>[-<SDL Key Mod>],<ST Scancode>[-<ST Scancode>[...]]
+#   <SDL Key>=<SDL Key Name> or <SDL Key SYMbole Code> or <SDL Key POSition/SCANCODE>
+#   Note:
+#     <ST Scancode> are playing in the given order; it's important!
+#     So, must be in first place, LShift(0x2A), LAlt(0x38), ...
+#
+# Scan codes for Atari keyboard key positions can be seen here:
+#   http://eerott.mbnet.fi/hatari/img/st-keymap.png
+#
+# tests/keymap/ directory contains programs to discover/test the PC SDL
+# and Atari scan code values.  Hatari's default PC key code -> ST scan
+# code mappings are in src/keymap.c source file.
+#
+# Example 1: If you want to get the 'y' and 'z' keys right with a german TOS
+# ROM, you can use the following two lines to map the PC keys to the right
+# ST scan codes:
+#Y,44
+#Z,21
+#
+# Example 2: Layout for Atari STF with AZERTY French Keyboard
+# 'q': @4=Position of key "q/Q" on an AZERTY French Keyboard
+#      => So, lower case letter "q" is targeted.
+#      30=ST Scancode of key "q/Q"
+@4,30
+# 'Q': @4=SDL Scancode; Position of key "q/Q" on an AZERTY French Keyboard
+#      -1=SDL Modifiers; Here, when LSHIFT is pressed
+#      => So, upper case letter "Q" is targeted.
+#      0x2A=ST Scancode of key LSHIFT
+#        30=ST Scancode of key "q/Q"
+@4-1,0x2A-30
+# ','
+@16,0x32
+# '?'
+@16-1,0x2A-0x32
+# 'a'
+@20,16
+# 'A'
+@20-1,0x2A-16
+# 'z'
+@26,17
+# 'Z'
+@26-1,0x2A-17
+# 'w'
+@29,44
+# 'W'
+@29-1,0x2A-44
+# '1'
+@30-1,0x2A-2
+# '2'
+@31-1,0x2A-3
+# '3'
+@32-1,0x2A-4
+# '#'
+@32-0x200,0x2B
+# '4'
+@33-1,0x2A-5
+# '{'
+@33-0x200,0x2A-0x38-0x1A
+# '5'
+@34-1,0x2A-6
+# '['
+@34-0x200,0x38-0x1A
+# '-'
+@35,13
+# '6'
+@35-1,0x2A-7
+# '|'
+@35-0x200,0x2A-0x2B
+# '7'
+@36-1,0x2A-8
+# '`'
+@36-0x200,0x29
+# '_'
+@37,0x2A-13
+# '8'
+@37-1,0x2A-9
+# '\'
+@37-0x200,0x38-0x28
+# '9'
+@38-1,0x2A-10
+# '^'
+@38-0x200,0x1A
+# '0'
+@39-1,0x2A-11
+# '@'
+@39-0x200,0x38-0x2B
+# '°'
+@45-1,0x2A-0x0C
+# ']'
+@45-0x200,0x38-0x1B
+# '='
+@46,0x35
+# '+'
+@46-1,0x2A-0x35
+# '}'
+@46-0x200,0x2A-0x38-0x1B
+# 'm'
+@51,0x27
+# 'M'
+@51-1,0x2A-0x27
+# 'ù'
+@52,0x28
+# '%'
+@52-1,0x2A-0x28
+# ";"
+@54,0x33
+# '.'
+@54-1,0x2A-0x33
+# '/'
+@55-1,0x2A-0x34
+# '>'
+@100-1,0x2A-0x60
+
